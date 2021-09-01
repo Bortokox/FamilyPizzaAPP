@@ -37,7 +37,6 @@ export class HttpErrorInterceptor implements HttpInterceptor {
           if (error.error instanceof ErrorEvent) {
 
             errorMessage = error.error.message;
-            ;
 
           } else {
             errorMessage = error.message + ' status: ' + error.status.toString();
@@ -49,7 +48,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
         })
 
-      )
+      );
 
   }
 

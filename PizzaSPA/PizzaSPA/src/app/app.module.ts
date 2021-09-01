@@ -21,7 +21,7 @@ import { CreatePizzaComponent } from './create-pizza/create-pizza.component';
 import { SuggestedPizzaComponent } from './suggested-pizza/suggested-pizza.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 import { CommentsServiceService } from './services/comments.service';
 

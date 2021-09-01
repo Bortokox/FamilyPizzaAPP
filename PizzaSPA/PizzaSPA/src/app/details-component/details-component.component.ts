@@ -10,13 +10,13 @@ import { PizzaServiceService } from '../services/pizza-service.service';
   styleUrls: ['./details-component.component.scss']
 })
 export class DetailsComponentComponent implements OnInit {
-  pizza: PizzaDescriptionDTO
+  pizza: PizzaDescriptionDTO;
   id: any;
   clicked = false;
   constructor(private pizzaService: PizzaServiceService, private router: ActivatedRoute, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.id = this.router.snapshot.paramMap.get("id");
+    this.id = this.router.snapshot.paramMap.get('id');
     this.loadPizza();
   }
 

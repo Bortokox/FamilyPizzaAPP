@@ -19,17 +19,17 @@ export class CommentsComponent implements OnInit {
     this.commentForm = this.fb.group({
       comment: ['', [Validators.required, Validators.minLength(2)]],
       initials: [''],
-    })
+    });
   }
 
   ngOnInit(): void {
-    this.comments = this.act.snapshot.data['com'];
+    this.comments = this.act.snapshot.data.com;
     this.dataSource = this.comments;
   }
 
   addNewComment() {
     if (this.commentForm.valid) {
-      let newComment: any = this.commentForm.value;
+      const newComment: any = this.commentForm.value;
       this.service.addComment(newComment);
       this.toastr.success('Komentarz dodany', 'Dziękujemy za Twoją sugestie :)');
       this.formReset();

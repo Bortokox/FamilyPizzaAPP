@@ -13,6 +13,6 @@ export class HomeComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pizzas = this.act.snapshot.data['nav'];
+    this.pizzas = this.act.snapshot.data.nav;
   }
 }

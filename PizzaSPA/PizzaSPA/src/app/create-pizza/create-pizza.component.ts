@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { PizzaServiceService } from '../services/pizza-service.service';
-import { Validators } from '@angular/forms'
+import { Validators } from '@angular/forms';
 import { SuggestedPizza } from '../Models/suggested-pizza';
 import { ToastrService } from 'ngx-toastr';
 
@@ -17,9 +17,9 @@ export class CreatePizzaComponent implements OnInit {
       name: ['', [Validators.required, Validators.minLength(2)]],
       ingridients: ['', [Validators.required]],
       description: ['', [Validators.required]],
-      prizeForSmall: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
-      prizeForLarge: ['', [Validators.required, Validators.pattern("^[0-9]*$")]]
-    })
+      prizeForSmall: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      prizeForLarge: ['', [Validators.required, Validators.pattern('^[0-9]*$')]]
+    });
   }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class CreatePizzaComponent implements OnInit {
   }
   addNewPizza() {
     if (this.pizzaForm.valid) {
-      let newPizza: SuggestedPizza = this.pizzaForm.value;
+      const newPizza: SuggestedPizza = this.pizzaForm.value;
       this.service.addNewPizza(newPizza);
       this.toastr.success('Nowa pizza stworzona', 'Dziękujemy za Twoją sugestie :)');
       this.formReset();

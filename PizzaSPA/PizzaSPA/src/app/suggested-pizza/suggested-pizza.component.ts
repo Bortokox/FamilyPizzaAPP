@@ -16,7 +16,7 @@ export class SuggestedPizzaComponent implements OnInit {
   constructor(private act: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.suggestedPizzas = this.act.snapshot.data['suggest'];
+    this.suggestedPizzas = this.act.snapshot.data.suggest;
     this.dataSource = this.suggestedPizzas;
   }
 
