@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    border-spacing: 0 8px !important;
+}
+.header {
+    text-align: center;
+    color: orange;
+}
+td.mat-cell {
+    padding: 16px 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+   }
+th.mat-header-cell {
+    padding: 16px 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}

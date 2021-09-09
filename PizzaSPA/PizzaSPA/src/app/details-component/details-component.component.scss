@@ -1,0 +1,20 @@
+.example-card {
+    height: fit-content;
+    width: fit-content;
+    background-color: #e1f5fe;
+    color: darkgoldenrod;
+    overflow: hidden;
+    margin-left: 300px;
+}
+.like {
+    padding-left: 10px;
+}
+.dislike {
+    padding-left: 50px;
+}
+.like-button {
+    color: lightgreen;
+}
+.dislike-button {
+    color: red;
+}

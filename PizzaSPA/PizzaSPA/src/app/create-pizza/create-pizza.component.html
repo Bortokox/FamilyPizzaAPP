@@ -1,0 +1,36 @@
+<h1 style="color: yellow;"><strong>Stwórz własną pizzę aby zasugerowac nam co chciałbys żebyśmy wprowadzili do naszej
+              oferty :D</strong></h1>
+<div [formGroup]="pizzaForm">
+       <label style="color: white;">Nazwa:</label>
+       <input class="form-control" formControlName="name" placeholder="Wpisz nazwe swojej pizzy" appearance="fill">
+       <p class="error" *ngIf="(pizzaForm.get('name').touched && pizzaForm.get('name').invalid)">Uzupełnij pole</p>
+       <label style="color: white;">Cena:</label>
+       <td>
+              <span style="float: left;">
+                     <input class="form-control" formControlName="prizeForSmall" placeholder="Podaj cenę za małą pizzę"
+                            appearance="fill">
+                     <p class="error"
+                            *ngIf="(pizzaForm.get('prizeForSmall').touched && pizzaForm.get('prizeForSmall').invalid)">
+                            Uzupełnij pole jako wartość liczbową</p>
+              </span>
+              <span style="float: right; margin-left: 10px;">
+                     <input class="form-control" formControlName="prizeForLarge" placeholder="Podaj cenę za dużą pizzę"
+                            appearance="fill">
+                     <p class="error"
+                            *ngIf="(pizzaForm.get('prizeForLarge').touched && pizzaForm.get('prizeForLarge').invalid)">
+                            Uzupełnij pole jako wartość liczbową</p>
+              </span>
+
+
+       </td>
+       <label style="color: white;">Składniki:</label>
+       <input class="form-control" formControlName="ingridients" placeholder="Podaj składniki" appearance="fill">
+       <p class="error" *ngIf="(pizzaForm.get('ingridients').touched && pizzaForm.get('ingridients').invalid)">Uzupełnij
+              pole</p>
+       <label style="color: white;">Opis:</label>
+       <textarea class="form-control" formControlName="description" placeholder="Napisz krótki opis"
+              appearance="fill"></textarea>
+       <p class="error" *ngIf="(pizzaForm.get('description').touched && pizzaForm.get('description').invalid)">Uzupełnij
+              pole</p>
+</div>
+<button style="margin-top: 10px;" mat-raised-button color="accent" (click)="addNewPizza()">Stwórz pizze</button>

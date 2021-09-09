@@ -1,0 +1,30 @@
+<div class="card-wrapper" style="width: fit-content;">
+  <mat-card class="example-card" style="width: fit-content;">
+    <mat-card-header>
+      <img src="https://lh3.googleusercontent.com/p/AF1QipPS3OKlZqDX-P8Yp7UHyTzccmbF0U5DCK1OsY6A=w600-k"
+        mat-card-avatar />
+      <mat-card-title>{{pizza.name}}</mat-card-title>
+    </mat-card-header>
+    <p>
+      {{pizza.description}}
+    </p>
+    <img mat-card-image style="width: 500px;" src="{{pizza.image}}" alt="Angular Logo">
+    <mat-card-content>
+      <p>
+        {{pizza.ingridients}}
+      </p>
+    </mat-card-content>
+    <div class="row">
+      <p class="like">{{pizza.like}}</p>
+      <mat-icon class="like-button" style="padding-left: 5px;">thumb_up</mat-icon>
+      <p class="dislike">{{pizza.dislike}}</p>
+      <mat-icon class="dislike-button" style="padding-left: 5px;">thumb_down</mat-icon>
+    </div>
+    <mat-card-actions>
+      <button [disabled]="clicked" mat-raised-button color="accent" (click)="likeRise(); clicked = true">LUBIĘ</button>
+      <button [disabled]="clicked" mat-raised-button color="primary" (click)="dislikeRise(); clicked = true">NIE
+        PRZEPADAM</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

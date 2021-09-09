@@ -1,0 +1,17 @@
+<h1 class="header">U nas zjesz najlepszą pizze możesz wybrać spośród wielu !!! Kliknij aby przeczytac cos więcej.</h1>
+<mat-card *ngFor="let pizza of pizzas" class="example-card" routerLink='/nav/{{pizza.id}}'>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{pizza.name}}</mat-card-title>
+  </mat-card-header>
+  <p>
+    <mat-icon>local_pizza</mat-icon>Mała: {{pizza.prizeForSmall}} złociszy
+  </p>
+  <p>
+    <mat-icon>local_pizza</mat-icon>Duża: {{pizza.prizeForLarge}} złociszy
+  </p>
+  <picture>
+    <source srcset={{pizza.image}}>
+    <img mat-card-image src="" alt="Photo of pizza">
+  </picture>
+</mat-card>

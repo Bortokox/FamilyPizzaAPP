@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 250px;
+    max-height: 280px;
+    background-color: #e1f5fe ;
+    display: inline-block;
+    margin-left: 20px;
+    color: darkgoldenrod;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow:4px 3px 8px 0px rgba(107, 13, 13, 0.4);
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    &:hover {
+        box-shadow:4px 3px 11px 6px rgba(107, 13, 13, 0.4);
+        transform: translateY(-3px);
+    } 
+}
+
+mat-card img {
+    justify-content: center;
+}
